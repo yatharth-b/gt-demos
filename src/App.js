@@ -15,8 +15,7 @@ function App() {
     console.log(ticket)
     fetch("https://sso.gatech.edu/cas/serviceValidate?" + new URLSearchParams({
       ticket: ticket,
-      service: "http://localhost:3000/?status=in_process",
-      version: "3.0"
+      service: "https://gt-demos.vercel.app/?status=in_process",
     })).then((res) => res.text()).then((res) => {console.log(res)})
   }
   return (
